@@ -23,16 +23,25 @@
 &kp LC(SPACE)  &mt LC(X) X                    &mt LC(V) V             &mt LC(L) L       &mt LC(C) C  &mt LC(W) W                    &mt LC(K) K            &mt LC(H) H     &mt LC(G) G          &mt LC(F) F            &mt LC(Q) Q  &mt LC(S) MINUS
 &kp LC(LS(M))  &mt LC(U) U                    &mt LC(I) I             &mt LC(A) A       &mt LC(E) E  &mt LC(O) O                    &mt LC(S) S            &mt LC(N) N     &mt LC(R) R          &mt LC(T) T            &mt LC(D) D  &mt LC(Y) Y
 &kp LSHFT      &mt LEFT_CONTROL LEFT_BRACKET  &mt LEFT_WIN SEMICOLON  &mt LEFT_ALT SQT  &mt LC(P) P  &mt LC(Z) Z                    &mt LC(B) B            &mt LC(M) M     &mt LC(COMMA) COMMA  &mt LC(PERIOD) PERIOD  &mt LC(J) J  &kp ESC
-                                                                      &mo 2             &kp SPACE    &mt LC(BACKSPACE) BACKSPACE    &mt LC(RETURN) RETURN  &kp LEFT_SHIFT  &mo 2
+                                                                      &mo 3             &kp SPACE    &mt LC(BACKSPACE) BACKSPACE    &mt LC(RETURN) RETURN  &kp LEFT_SHIFT  &mo 3
             >;
         };
 
-        layer_2 {
+        special {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp TILDE      &kp         &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
+&none  &kp            &kp         &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
+&none  &kp BACKSLASH  &kp DOLLAR  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
+                                  &kp  &kp  &kp    &kp  &kp  &kp
+            >;
+        };
+
+        num {
+            bindings = <
+&none  &kp PG_UP  &mt LC(BACKSPACE) BACKSPACE  &kp UP    &mt LC(DELETE) DELETE  &kp PG_DN    &kp SYSREQ       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
+&none  &kp HOME   &mt LC(LEFT) LEFT            &kp DOWN  &mt LC(RIGHT) RIGHT    &kp END      &kp LG(LS(S))    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RSHFT  &kp QUESTION
+&none  &kp LCTRL  &kp H                        &kp J     &kp K                  &kp L        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LALT   &kp DOLLAR
+                                               &trans    &kp TAB                &trans       &trans           &trans           &trans
             >;
         };
 
