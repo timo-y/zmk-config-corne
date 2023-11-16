@@ -14,10 +14,10 @@
 
         default_layer {
             bindings = <
-&kp LC(SPACE)  &mt LC(X) X                    &mt LC(V) V             &mt LC(L) L       &mt LC(C) C  &mt LC(W) W                    &mt LC(K) K            &mt LC(H) H     &mt LC(G) G          &mt LC(F) F            &mt LC(Q) Q  &mt LC(S) MINUS
-&kp LC(LS(M))  &mt LC(U) U                    &mt LC(I) I             &mt LC(A) A       &mt LC(E) E  &mt LC(O) O                    &mt LC(S) S            &mt LC(N) N     &mt LC(R) R          &mt LC(T) T            &mt LC(D) D  &mt LC(Y) Y
-&kp LSHFT      &mt LEFT_CONTROL LEFT_BRACKET  &mt LEFT_WIN SEMICOLON  &mt LEFT_ALT SQT  &mt LC(P) P  &mt LC(Z) Z                    &mt LC(B) B            &mt LC(M) M     &mt LC(COMMA) COMMA  &mt LC(PERIOD) PERIOD  &mt LC(J) J  &kp ESC
-                                                                      &mo 1             &kp SPACE    &mt LC(BACKSPACE) BACKSPACE    &mt LC(RETURN) RETURN  &kp LEFT_SHIFT  &mo 2
+&kp LC(SPACE)  &ht_tp LC(X) X                    &ht_tp LC(V) V             &ht_tp LC(L) L       &ht_tp LC(C) C  &ht_tp LC(W) W                    &ht_tp LC(K) K            &ht_tp LC(H) H     &ht_tp LC(G) G          &ht_tp LC(F) F            &ht_tp LC(Q) Q  &ht_tp LC(S) MINUS
+&kp LC(LS(M))  &ht_tp LC(U) U                    &ht_tp LC(I) I             &ht_tp LC(A) A       &ht_tp LC(E) E  &ht_tp LC(O) O                    &ht_tp LC(S) S            &ht_tp LC(N) N     &ht_tp LC(R) R          &ht_tp LC(T) T            &ht_tp LC(D) D  &ht_tp LC(Y) Y
+&kp LSHFT      &ht_tp LEFT_CONTROL LEFT_BRACKET  &ht_tp LEFT_WIN SEMICOLON  &ht_tp LEFT_ALT SQT  &ht_tp LC(P) P  &ht_tp LC(Z) Z                    &ht_tp LC(B) B            &ht_tp LC(M) M     &ht_tp LC(COMMA) COMMA  &ht_tp LC(PERIOD) PERIOD  &ht_tp LC(J) J  &kp ESC
+                                                                      &mo 1             &kp SPACE    &ht_tp LC(BACKSPACE) BACKSPACE    &ht_tp LC(RETURN) RETURN  &kp LEFT_SHIFT  &mo 2
             >;
         };
 
@@ -32,8 +32,8 @@
 
         num {
             bindings = <
-&none  &kp PG_UP  &mt LC(BACKSPACE) BACKSPACE  &kp UP    &mt LC(DELETE) DELETE  &kp PG_DN    &kp SYSREQ       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
-&none  &kp HOME   &mt LC(LEFT) LEFT            &kp DOWN  &mt LC(RIGHT) RIGHT    &kp END      &kp LG(LS(S))    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RSHFT  &kp QUESTION
+&none  &kp PG_UP  &ht_tp LC(BACKSPACE) BACKSPACE  &kp UP    &ht_tp LC(DELETE) DELETE  &kp PG_DN    &kp SYSREQ       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
+&none  &kp HOME   &ht_tp LC(LEFT) LEFT            &kp DOWN  &ht_tp LC(RIGHT) RIGHT    &kp END      &kp LG(LS(S))    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RSHFT  &kp QUESTION
 &none  &kp LCTRL  &kp H                        &kp J     &kp K                  &kp L        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LALT   &kp DOLLAR
                                                &trans    &kp TAB                &trans       &trans           &trans           &trans
             >;
