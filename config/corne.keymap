@@ -9,43 +9,54 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    keymap {
+ht_tp: hold_tap_tap_preferred {
+         compatible = "zmk,behavior-hold-tap";
+         label = "REQUIRE_PRIOR_IDLE";
+#binding-cells = <2>;
+         flavor = "tap-preferred";
+         tapping-term-ms = <200>;
+         quick-tap-ms = <200>;
+         require-prior-idle-ms = <125>;
+         bindings = <&kp>, <&kp>;
+     };
+
+     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp LC(SPACE)  &ht_tp LC(X) X                    &ht_tp LC(V) V             &ht_tp LC(L) L       &ht_tp LC(C) C  &ht_tp LC(W) W                    &ht_tp LC(K) K            &ht_tp LC(H) H     &ht_tp LC(G) G          &ht_tp LC(F) F            &ht_tp LC(Q) Q  &ht_tp LC(S) MINUS
-&kp LC(LS(M))  &ht_tp LC(U) U                    &ht_tp LC(I) I             &ht_tp LC(A) A       &ht_tp LC(E) E  &ht_tp LC(O) O                    &ht_tp LC(S) S            &ht_tp LC(N) N     &ht_tp LC(R) R          &ht_tp LC(T) T            &ht_tp LC(D) D  &ht_tp LC(Y) Y
-&kp LSHFT      &ht_tp LEFT_CONTROL LEFT_BRACKET  &ht_tp LEFT_WIN SEMICOLON  &ht_tp LEFT_ALT SQT  &ht_tp LC(P) P  &ht_tp LC(Z) Z                    &ht_tp LC(B) B            &ht_tp LC(M) M     &ht_tp LC(COMMA) COMMA  &ht_tp LC(PERIOD) PERIOD  &ht_tp LC(J) J  &kp ESC
-                                                                      &mo 1             &kp SPACE    &ht_tp LC(BACKSPACE) BACKSPACE    &ht_tp LC(RETURN) RETURN  &kp LEFT_SHIFT  &mo 2
-            >;
+                &kp LC(SPACE)  &ht_tp LC(X) X                    &ht_tp LC(V) V             &ht_tp LC(L) L       &ht_tp LC(C) C  &ht_tp LC(W) W                    &ht_tp LC(K) K            &ht_tp LC(H) H     &ht_tp LC(G) G          &ht_tp LC(F) F            &ht_tp LC(Q) Q  &ht_tp LC(S) MINUS
+                &kp LC(LS(M))  &ht_tp LC(U) U                    &ht_tp LC(I) I             &ht_tp LC(A) A       &ht_tp LC(E) E  &ht_tp LC(O) O                    &ht_tp LC(S) S            &ht_tp LC(N) N     &ht_tp LC(R) R          &ht_tp LC(T) T            &ht_tp LC(D) D  &ht_tp LC(Y) Y
+                &kp LSHFT      &ht_tp LEFT_CONTROL LEFT_BRACKET  &ht_tp LEFT_WIN SEMICOLON  &ht_tp LEFT_ALT SQT  &ht_tp LC(P) P  &ht_tp LC(Z) Z                    &ht_tp LC(B) B            &ht_tp LC(M) M     &ht_tp LC(COMMA) COMMA  &ht_tp LC(PERIOD) PERIOD  &ht_tp LC(J) J  &kp ESC
+                &mo 1             &kp SPACE    &ht_tp LC(BACKSPACE) BACKSPACE    &ht_tp LC(RETURN) RETURN  &kp LEFT_SHIFT  &mo 2
+                >;
         };
 
         special {
             bindings = <
-&none  &kp TILDE      &none         &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none            &none         &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &kp BACKSLASH  &kp DOLLAR  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                                  &none  &none  &none    &none  &none  &none
-            >;
+                &none  &kp TILDE      &none         &none  &none  &none    &none  &none  &none  &none  &none  &none
+                &none  &none            &none         &none  &none  &none    &none  &none  &none  &none  &none  &none
+                &none  &kp BACKSLASH  &kp DOLLAR  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                &none  &none  &none    &none  &none  &none
+                >;
         };
 
         num {
             bindings = <
-&none  &kp PG_UP  &ht_tp LC(BACKSPACE) BACKSPACE  &kp UP    &ht_tp LC(DELETE) DELETE  &kp PG_DN    &kp SYSREQ       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
-&none  &kp HOME   &ht_tp LC(LEFT) LEFT            &kp DOWN  &ht_tp LC(RIGHT) RIGHT    &kp END      &kp LG(LS(S))    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RSHFT  &kp QUESTION
-&none  &kp LCTRL  &kp H                        &kp J     &kp K                  &kp L        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LALT   &kp DOLLAR
-                                               &trans    &kp TAB                &trans       &trans           &trans           &trans
-            >;
+                &none  &kp PG_UP  &ht_tp LC(BACKSPACE) BACKSPACE  &kp UP    &ht_tp LC(DELETE) DELETE  &kp PG_DN    &kp SYSREQ       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
+                &none  &kp HOME   &ht_tp LC(LEFT) LEFT            &kp DOWN  &ht_tp LC(RIGHT) RIGHT    &kp END      &kp LG(LS(S))    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RSHFT  &kp QUESTION
+                &none  &kp LCTRL  &kp H                        &kp J     &kp K                  &kp L        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LALT   &kp DOLLAR
+                &trans    &kp TAB                &trans       &trans           &trans           &trans
+                >;
         };
 
         numbers_bt {
             bindings = <
-&none       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&none       &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans  &trans     &trans  &trans
-                                        &none         &trans        &none           &none     &trans    &none
-            >;
+                &none       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &none
+                &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+                &none       &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans  &trans     &trans  &trans
+                &none         &trans        &none           &none     &trans    &none
+                >;
         };
     };
 };
