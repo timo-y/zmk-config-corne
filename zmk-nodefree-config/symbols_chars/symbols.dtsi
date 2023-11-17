@@ -1,0 +1,10 @@
+/* symbols */
+ZMK_UNICODE_SINGLE(de_underscore,       N0, N0,  N5, F)
+ZMK_UNICODE_SINGLE(de_lbracket,         N0, N0,  N5, B)
+ZMK_UNICODE_SINGLE(de_rbracket,         N0, N0,  N5, D)
+ZMK_UNICODE_SINGLE(de_caret,            N0, N0,  N5, E)
+ZMK_UNICODE_SINGLE(de_bslash,           N0, N0,  N5, C)
+ZMK_UNICODE_SINGLE(de_fslash,           N0, N0,  N2, F)
+ZMK_UNICODE_SINGLE(de_lbrace,           N0, N0,  N7, B)
+ZMK_UNICODE_SINGLE(de_rbrace,           N0, N0,  N7, D)
+
