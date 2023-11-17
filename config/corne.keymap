@@ -14,8 +14,6 @@
 
 /* layer and key shortcuts */
 
-#define CTAP(keycode) &ct LC(keycode) keycode
-
 #define ___ &trans
 
 #define NUM1 KP_NUMBER_1
@@ -43,6 +41,9 @@ ZMK_BEHAVIOR(ct, hold-tap,
     quick-tap-ms = <125>;
     bindings = <&kp>, <&kp>;
 )
+
+#define CTAP(keycode) &ct LC(keycode) keycode
+
 // umlaute
 //ZMK_BEHAVIOR(de_ue_lctr, hold-tap,
 //    bindings = <&kp LEFT_CONTROL, <&de_ue>;
