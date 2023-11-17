@@ -17,16 +17,6 @@
 #define CTAP(keycode) &ct LC(keycode) keycode
 
 #define ___ &trans
-#define LB LEFT_BRACKET
-#define LW LEFT_WIN
-#define SC SEMICOLON
-#define CO COMMA
-#define PE PERIOD
-#define BS BACKSPACE
-#define DL DELETE
-
-#define LE LEFT
-#define RI RIGHT
 
 #define NUM1 KP_NUMBER_1
 #define NUM2 KP_NUMBER_2 
@@ -72,7 +62,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LSHIFT    &de_ue        &de_oe        &de_ae        CTAP(P)       CTAP(Y)           CTAP(B)       CTAP(M)       CTAP(CO)      CTAP(PE)      CTAP(J)       &kp ESC
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &mo SPECIAL   &kp SPACE     CTAP(BS)          CTAP(RE)      &kp LSHIFT    &mo NUM
+                                                    &mo SPECIAL   &kp SPACE     CTAP(BSPC)        CTAP(RETURN)  &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -90,9 +80,9 @@ ZMK_LAYER(special_layer,
 
 ZMK_LAYER(num_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          ___           &kp PG_UP     &ct LC(BS) BS &kp UP        &ct LC(DL) DL &kp PG_DN         &kp SYSREQ    &kp NUM7      &kp NUM8      &kp NUM9      &none         &none
+          ___           &kp PG_UP     CTAP(BSPC)    &kp UP        CTAP(DELETE)  &kp PG_DN         &kp SYSREQ    &kp NUM7      &kp NUM8      &kp NUM9      &none         &none
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp HOME      &ct LC(LE) LE &kp DOWN      &ct LC(RI) RI &kp END           &kp LG(LS(S)) &kp NUM4      &kp NUM5      &kp NUM6      &kp RSHFT     &kp QUESTION
+          ___           &kp HOME      CTAP(LEFT)    &kp DOWN      CTAP(RIGHT)   &kp END           &kp LG(LS(S)) &kp NUM4      &kp NUM5      &kp NUM6      &kp RSHIFT    &kp QUESTION
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           ___           &kp LCTRL     &kp H         &kp J         &cp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp LALT      &kp DOLLAR
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
