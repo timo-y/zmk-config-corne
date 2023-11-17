@@ -35,7 +35,7 @@
 /* custom behaviors */
 
 // control-tap-behavior
-ZMK_BEHAVIOR(ct, hold-tap,
+ZMK_BEHAVIOR(ct, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <125>;
@@ -45,13 +45,13 @@ ZMK_BEHAVIOR(ct, hold-tap,
 #define CTAP(keycode) &ct LC(keycode) keycode
 
 // umlaute
-//ZMK_BEHAVIOR(de_ue_lctr, hold-tap,
+//ZMK_BEHAVIOR(de_ue_lctr, hold_tap,
 //    bindings = <&kp LEFT_CONTROL, <&de_ue>;
 //)
-//ZMK_BEHAVIOR(de_oe_lwin, hold-tap,
+//ZMK_BEHAVIOR(de_oe_lwin, hold_tap,
 //    bindings = <&kp LEFT_WIN>, <&de_oe>;
 //)
-//ZMK_BEHAVIOR(de_ae_lalt, hold-tap,
+//ZMK_BEHAVIOR(de_ae_lalt, hold_tap,
 //    bindings = <&kp LEFT_ALT>, <&de_ae>;
 //)
 
