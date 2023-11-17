@@ -15,8 +15,6 @@
 /* layer and key shortcuts */
 
 #define ___ &trans
-#define LC LEFT_CONTROL
-#define LA LEFT_ALT
 #define LB LEFT_BRACKET
 #define LW LEFT_WIN
 #define SC SEMICOLON
