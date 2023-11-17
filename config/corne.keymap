@@ -53,13 +53,13 @@ ZMK_BEHAVIOR(ct, hold-tap,
 )
 // umlaute
 ZMK_BEHAVIOR(de_ue_lctr, hold-tap,
-    bindings = <&kp LC>, <&de_ue>;
+    bindings = <&kp LEFT_CONTROL, <&de_ue>;
 )
 ZMK_BEHAVIOR(de_oe_lwin, hold-tap,
-    bindings = <&kp LW>, <&de_oe>;
+    bindings = <&kp LEFT_WIN>, <&de_oe>;
 )
 ZMK_BEHAVIOR(de_ae_lalt, hold-tap,
-    bindings = <&kp LA>, <&de_ae>;
+    bindings = <&kp LEFT_ALT>, <&de_ae>;
 )
 
 ZMK_LAYER(default_layer,
