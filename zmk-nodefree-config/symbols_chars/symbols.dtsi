@@ -32,3 +32,4 @@
 #define DE_SQT           PIPE2
 #define DE_SCOLON        LESS_THAN
 #define DE_EURO          RALT(E)
+#define DE_GRAVE         PLUS
