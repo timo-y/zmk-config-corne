@@ -1,4 +1,6 @@
 /* symbols */
+#pragma once
+
 #define DE_USCORE        QMARK
 #define DE_CIRCLE        TILDE
 #define DE_LBRCKT        RALT(N8)
