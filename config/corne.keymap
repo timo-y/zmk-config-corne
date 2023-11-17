@@ -11,7 +11,7 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
-#include "../zmk-nodefree-config/symbol_chars/symbols.dtsi"
+#include "../zmk-nodefree-config/symbols_chars/symbols.dtsi"
 
 /* layer and key shortcuts */
 
