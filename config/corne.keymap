@@ -57,11 +57,11 @@ ZMK_BEHAVIOR(ct, hold_tap,
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp LC(SPACE) CTAP(X)       CTAP(V)       CTAP(L)       CTAP(C)       CTAP(W)           CTAP(K)       CTAP(H)       CTAP(G)       CTAP(F)       CTAP(Q)       &de_eszett
+          &kp LC(SPACE) CTAP(X)       CTAP(V)       CTAP(L)       CTAP(C)       CTAP(W)           CTAP(K)       CTAP(H)       CTAP(G)       CTAP(F)       CTAP(Q)       CTAP(MINUS)
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LC(LS(M)) CTAP(U)       CTAP(I)       CTAP(A)       CTAP(E)       CTAP(O)           CTAP(S)       CTAP(N)       CTAP(R)       CTAP(T)       CTAP(D)       CTAP(Z)    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHIFT    &de_ue        &de_oe        &de_ae        CTAP(P)       CTAP(Y)           CTAP(B)       CTAP(M)       CTAP(COMMA)   CTAP(PERIOD)  CTAP(J)       &kp ESC
+          &kp LSHIFT   &mt LCTRL LBKT &mt LWIN SEMI &mt LALT SQT  CTAP(P)       CTAP(Y)           CTAP(B)       CTAP(M)       CTAP(COMMA)   CTAP(PERIOD)  CTAP(J)       &kp ESC
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo SPECIAL   &kp SPACE     CTAP(BSPC)        CTAP(RETURN)  &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
