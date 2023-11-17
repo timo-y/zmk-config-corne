@@ -59,11 +59,11 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(special_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          ___           DE_CIRCLE     DE_UNDERSCORE DE_LBRACKET   DE_RBRACKET   DE_CARET         DE_EXCLAMATION DE_LT         DE_GT         DE_EQ         DE_AMPERSAND  DE_PARA
+          ___           &kp DE_CIRCLE &kp DE_USCORE &kp DE_LBRCKT &kp DE_RBRCKT &kp DE_CARET      &kp DE_EXCL   &kp DE_LT     &kp DE_GT     &kp DE_EQ     &kp DE_AMP    &kp DE_PARA
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           DE_BSLASH     DE_FSLASH     DE_LBRACE     DE_RBRACE     DE_STAR           DE_QMARK      DE_LPAR       DE_RPAR       DE_MINUS      DE_COLON      DE_AT
+          ___           &kp DE_BSLASH &kp DE_FSLASH &kp DE_LBRACE &kp DE_RBRACE &kp DE_STAR       &kp DE_QMARK  &kp DE_LPAR   &kp DE_RPAR   &kp DE_MINUS  &kp DE_COLON  &kp DE_AT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           DE_HASH       DE_DOLLAR     DE_PIPE       DE_TILDE      DE_GRAVE          DE_PLUS       DE_PERCENT    DE_DQT        DE_SQT        DE_SEMICOLON  DE_EURO
+          ___           &kp DE_HASH   &kp DE_DOLLAR &kp DE_PIPE   &kp DE_TILDE  &kp DE_GRAVE      &kp DE_PLUS   &kp DE_PERCENT &kp DE_DQT   &kp DE_SQT    &kp DE_SCOLON &kp DE_EURO
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ___           ___           ___               ___           ___           &mo BT
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯

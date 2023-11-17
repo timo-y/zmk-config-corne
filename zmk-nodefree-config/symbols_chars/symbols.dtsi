@@ -1,34 +1,34 @@
 /* symbols */
-#define DE_UNDERSCORE   &kp QMARK
-#define DE_CIRCLE       &kp TILDE
-#define DE_LBRACKET     &kp RALT(N8)
-#define DE_RBRACKET     &kp RALT(N9)
-#define DE_LBRACE       &kp RALT(N7)
-#define DE_RBRACE       &kp RALT(N0)
-#define DE_LPAR         &kp STAR
-#define DE_RPAR         &kp LPAR
-#define DE_BSLASH       &kp RALT(MINUS)
-#define DE_FSLASH       &kp AMPERSAND
-#define DE_CARET        &kp GRAVE
-#define DE_STAR         &kp RIGHT_BRACE
-#define DE_HASH         &kp BACKSLASH
-#define DE_DOLLAR       &kp DOLLAR
-#define DE_PIPE         &kp RALT(LESS_THAN)
-#define DE_TILDE        &kp RALT(PLUS)
-#define DE_GRAVE        &kp PLUS
-#define DE_EXCLAMATION  &kp EXCLAMATION
-#define DE_LT           &kp BACKSLASH
-#define DE_GT           &kp PIPE
-#define DE_EQ           &kp KP_EQUAL
-#define DE_AMPERSAND    &kp SLASH
-#define DE_PARA         &kp HASH
-#define DE_QMARK        &kp UNDERSCORE
-#define DE_MINUS        &kp KP_MINUS
-#define DE_COLON        &kp GREATER_THAN
-#define DE_AT           &kp RALT(Q)
-#define DE_PLUS         &kp KP_PLUS
-#define DE_PERCENT      &kp PERCENT
-#define DE_DQT          &kp AT_SIGN
-#define DE_SQT          &kp PIPE2
-#define DE_SEMICOLON    &kp LESS_THAN
-#define DE_EURO         &kp RALT(E)
+#define DE_USCORE        QMARK
+#define DE_CIRCLE        TILDE
+#define DE_LBRCKT        RALT(N8)
+#define DE_RBRCKT        RALT(N9)
+#define DE_LBRACE        RALT(N7)
+#define DE_RBRACE        RALT(N0)
+#define DE_LPAR          STAR
+#define DE_RPAR          LPAR
+#define DE_BSLASH        RALT(MINUS)
+#define DE_FSLASH        AMPERSAND
+#define DE_CARET         GRAVE
+#define DE_STAR          RIGHT_BRACE
+#define DE_HASH          BACKSLASH
+#define DE_DOLLAR        DOLLAR
+#define DE_PIPE          RALT(LESS_THAN)
+#define DE_TILDE         RALT(PLUS)
+#define DE_GRAVE         PLUS
+#define DE_EXCL          EXCLAMATION
+#define DE_LT            BACKSLASH
+#define DE_GT            PIPE
+#define DE_EQ            KP_EQUAL
+#define DE_AMP           SLASH
+#define DE_PARA          HASH
+#define DE_QMARK         UNDERSCORE
+#define DE_MINUS         KP_MINUS
+#define DE_COLON         GREATER_THAN
+#define DE_AT            RALT(Q)
+#define DE_PLUS          KP_PLUS
+#define DE_PERCENT       PERCENT
+#define DE_DQT           AT_SIGN
+#define DE_SQT           PIPE2
+#define DE_SCOLON        LESS_THAN
+#define DE_EURO          RALT(E)
