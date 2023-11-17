@@ -14,6 +14,8 @@
 
 /* layer and key shortcuts */
 
+#define CTAP(keycode) &ct LC(keycode) keycode
+
 #define ___ &trans
 #define LB LEFT_BRACKET
 #define LW LEFT_WIN
@@ -64,23 +66,23 @@ ZMK_BEHAVIOR(ct, hold-tap,
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp LC(SPACE) &ct LC(X) X   &ct LC(V) V   &ct LC(L) L   &ct LC(C) C   &ct LC(W) W       &ct LC(K) K   &ct LC(H) H   &ct LC(G) G   &ct LC(F) F   &ct LC(Q) Q   &de_eszett
+          &kp LC(SPACE) CTAP(X)       CTAP(V)       CTAP(L)       CTAP(C)       CTAP(W)           CTAP(K)       CTAP(H)       CTAP(G)       CTAP(F)       CTAP(Q)       &de_eszett
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LC(LS(M)) &ct LC(U) U   &ct LC(I) I   &ct LC(A) A   &ct LC(E) E   &ct LC(O) O       &ct LC(S) S   &ct LC(N) N   &ct LC(R) R   &ct LC(T) T   &ct LC(D) D   &ct LC(Z) Z
+          &kp LC(LS(M)) CTAP(U)       CTAP(I)       CTAP(A)       CTAP(E)       CTAP(O)           CTAP(S)       CTAP(N)       CTAP(R)       CTAP(T)       CTAP(D)       CTAP(Z)    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &de_ue        &de_oe        &de_ae        &ct LA SQT    &ct LC(P) P   &ct LC(Y) Y       &ct LC(B) B   &ct LC(M) M   &ct LC(CO) CO &kp LC(PE) PE &ct LC(J) J   &kp ESC
+          &kp LSHIFT    &de_ue        &de_oe        &de_ae        CTAP(P)       CTAP(Y)           CTAP(B)       CTAP(M)       CTAP(CO)      CTAP(PE)      CTAP(J)       &kp ESC
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &mo SPECIAL   &kp SPACE     &ct LC(BS) BS     &ct LC(RE) RE &kp LSHIFT    &mo NUM
+                                                    &mo SPECIAL   &kp SPACE     CTAP(BS)          CTAP(RE)      &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
 ZMK_LAYER(special_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp LC(SPACE) &kp TILDE     &ct LC(V) V   &ct LC(L) L   &ct LC(C) C   &ct LC(W) W       &ct LC(K) K   &ct LC(H) H   &ct LC(G) G   &ct LC(F) F   &ct LC(Q) Q   &de_sz
+          ___           &kp TILDE    ___            ___           ___           ___               ___           ___           ___           ___           ___           ___
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LC(LS(M)) &ct LC(U) U   &ct LC(I) I   &ct LC(A) A   &ct LC(E) E   &ct LC(O) O       &ct LC(S) S   &ct LC(N) N   &ct LC(R) R   &ct LC(T) T   &ct LC(D) D   &ct LC(Z) Z
+          ___           ___          ___            ___           ___           ___               ___           ___           ___           ___           ___           ___
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHIFT    &kp BACKSLASH &kp DOLLAR    &ct LA SQT    &ct LC(P) P   &ct LC(Y) Y       &ct LC(B) B   &ct LC(M) M   &ct LC(CO) CO &kp LC(PE) PE &ct LC(J) J   &kp ESC
+          ___           &kp BACKSLASH &kp DOLLAR    ___           ___           ___               ___           ___           ___           ___           ___           ___
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ___           ___           ___               ___           ___           &mo BT
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
