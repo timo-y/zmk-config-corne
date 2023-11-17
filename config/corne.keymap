@@ -52,15 +52,15 @@ ZMK_BEHAVIOR(ct, hold-tap,
     bindings = <&kp>, <&kp>;
 )
 // umlaute
-ZMK_BEHAVIOR(de_ue_lctr, hold-tap,
-    bindings = <&kp LEFT_CONTROL, <&de_ue>;
-)
-ZMK_BEHAVIOR(de_oe_lwin, hold-tap,
-    bindings = <&kp LEFT_WIN>, <&de_oe>;
-)
-ZMK_BEHAVIOR(de_ae_lalt, hold-tap,
-    bindings = <&kp LEFT_ALT>, <&de_ae>;
-)
+//ZMK_BEHAVIOR(de_ue_lctr, hold-tap,
+//    bindings = <&kp LEFT_CONTROL, <&de_ue>;
+//)
+//ZMK_BEHAVIOR(de_oe_lwin, hold-tap,
+//    bindings = <&kp LEFT_WIN>, <&de_oe>;
+//)
+//ZMK_BEHAVIOR(de_ae_lalt, hold-tap,
+//    bindings = <&kp LEFT_ALT>, <&de_ae>;
+//)
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -68,7 +68,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LC(LS(M)) &ct LC(U) U   &ct LC(I) I   &ct LC(A) A   &ct LC(E) E   &ct LC(O) O       &ct LC(S) S   &ct LC(N) N   &ct LC(R) R   &ct LC(T) T   &ct LC(D) D   &ct LC(Z) Z
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &de_ue_lctr   &de_oe_lwin   &de_ae_lalt   &ct LA SQT    &ct LC(P) P   &ct LC(Y) Y       &ct LC(B) B   &ct LC(M) M   &ct LC(CO) CO &kp LC(PE) PE &ct LC(J) J   &kp ESC
+          &de_ue        &de_oe        &de_ae        &ct LA SQT    &ct LC(P) P   &ct LC(Y) Y       &ct LC(B) B   &ct LC(M) M   &ct LC(CO) CO &kp LC(PE) PE &ct LC(J) J   &kp ESC
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo SPECIAL   &kp SPACE     &ct LC(BS) BS     &ct LC(RE) RE &kp LS        &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
