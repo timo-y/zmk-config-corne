@@ -16,11 +16,11 @@
 #define DE_HASH          BACKSLASH
 #define DE_DOLLAR        DOLLAR
 #define DE_PIPE          RA(LESS_THAN)
-#define DE_TILDE         RA(PLUS)
+#define DE_TILDE         LS(DE_PLUS)
 #define DE_GRAVE         PLUS
 #define DE_EXCL          EXCLAMATION
-#define DE_LT            BACKSLASH
-#define DE_GT            PIPE
+#define DE_LT            NUBS
+#define DE_GT            PIPE2
 #define DE_EQ            KP_EQUAL
 #define DE_AMP           SLASH
 #define DE_PARA          HASH
@@ -28,10 +28,10 @@
 #define DE_MINUS         KP_MINUS
 #define DE_COLON         GREATER_THAN
 #define DE_AT            RA(Q)
-#define DE_PLUS          KP_PLUS
+#define DE_PLUS          RBRC
 #define DE_PERCENT       PERCENT
 #define DE_DQT           AT_SIGN
-#define DE_SQT           PIPE2
+#define DE_SQT           PIPE
 #define DE_SCOLON        LESS_THAN
 #define DE_EURO          RA(E)
 #define DE_GRAVE         PLUS
