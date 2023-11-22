@@ -33,6 +33,17 @@
             }; \
         }; \
     };
+	
+#define ZMK_MACRO(name, type, ...) \
+    / { \
+        macros { \
+            name: name { \
+                label = ZMK_HELPER_STRINGIFY(ZB_ ## name); \
+                ZMK_BEHAVIOR_CORE_ ## type; \
+                __VA_ARGS__ \
+            }; \
+        }; \
+    };
 
 /* ZMK_LAYER */
 
@@ -109,8 +120,7 @@
     #elif HOST_OS == 1
         #define OS_UNICODE_LEAD &macro_tap &kp LS(LC(U))   // Linux
     #else
-		#define OS_UNICODE_LEAD &macro_press &kp LALT      // macOS/Windows-Alt-Codes
-        //#define OS_UNICODE_LEAD &macro_tap &kp RALT &kp U  // Windows + WinCompose (default)
+        #define OS_UNICODE_LEAD &macro_tap &kp RALT &kp U  // Windows + WinCompose (default)
     #endif
 #endif
 #if !defined OS_UNICODE_TRAIL
@@ -119,8 +129,7 @@
     #elif HOST_OS == 1
         #define OS_UNICODE_TRAIL &macro_tap &kp SPACE     // Linux
     #else
-		#define OS_UNICODE_TRAIL &macro_release &kp LALT  // macOS/Windows-Alt-Codes
-        //#define OS_UNICODE_TRAIL &macro_tap &kp RET       // Windows + WinCompose (default)
+        #define OS_UNICODE_TRAIL &macro_tap &kp RET       // Windows + WinCompose (default)
     #endif
 #endif
 
