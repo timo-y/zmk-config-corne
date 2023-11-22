@@ -69,15 +69,15 @@
 #define DE_SCLN LS(DE_COMMA)// ;
 #define DE_COLN LS(DE_PERIOD)  // :
 #define DE_UNDS LS(DE_MINUS)// _
-#define DE_SUP2 LA(DE_2)    // ²
-#define DE_SUP3 LA(DE_3)    // ³
-#define DE_LCBR LA(DE_7)    // {
-#define DE_LBRC LA(DE_8)    // [
-#define DE_RBRC LA(DE_9)    // ]
-#define DE_RCBR LA(DE_0)    // }
-#define DE_BSLS LA(DE_SS)   // (backslash)
-#define DE_AT   LA(DE_Q)    // @
-#define DE_EURO LA(DE_E)    // €
-#define DE_TILD LA(DE_PLUS) // ~
-#define DE_PIPE LA(DE_LT)	// |
-#define DE_MICR LA(DE_M)    // µ
+#define DE_SUP2 RA(DE_2)    // ²
+#define DE_SUP3 RA(DE_3)    // ³
+#define DE_LCBR RA(DE_7)    // {
+#define DE_LBRC RA(DE_8)    // [
+#define DE_RBRC RA(DE_9)    // ]
+#define DE_RCBR RA(DE_0)    // }
+#define DE_BSLS RA(DE_SS)   // (backslash)
+#define DE_AT   RA(DE_Q)    // @
+#define DE_EURO RA(DE_E)    // €
+#define DE_TILD RA(DE_PLUS) // ~
+#define DE_PIPE RA(DE_LT)	// |
+#define DE_MICR RA(DE_M)    // µ
