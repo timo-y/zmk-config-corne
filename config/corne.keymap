@@ -55,11 +55,11 @@ ZMK_BEHAVIOR(ud, macro_one_param,
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp LC(SPACE) CTAP(DE_X)    CTAP(DE_V)    CTAP(DE_L)    CTAP(DE_C)    CTAP(DE_W)        CTAP(DE_K)    CTAP(DE_H)    CTAP(DE_G)    CTAP(DE_F)    CTAP(DE_Q)    CTAP(DE_SS)
+          &kp ESC       CTAP(DE_X)    CTAP(DE_V)    CTAP(DE_L)    CTAP(DE_C)    CTAP(DE_W)        CTAP(DE_K)    CTAP(DE_H)    CTAP(DE_G)    CTAP(DE_F)    CTAP(DE_Q)    CTAP(DE_SS)
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LC(LS(M)) CTAP(DE_U)    CTAP(DE_I)    CTAP(DE_A)    CTAP(DE_E)    CTAP(DE_O)        CTAP(DE_S)    CTAP(DE_N)    CTAP(DE_R)    CTAP(DE_T)    CTAP(DE_D)    CTAP(DE_Y)    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHIFT   &mt LCTRL LBKT &mt LWIN SEMI &mt LALT SQT  CTAP(DE_P)    CTAP(DE_Z)        CTAP(DE_B)    CTAP(DE_M)    CTAP(DE_COMMA) CTAP(DE_PERIOD) CTAP(DE_J) &kp ESC
+          &kp LSHIFT   &mt LCTRL LBKT &mt LWIN SEMI &mt LALT SQT  CTAP(DE_P)    CTAP(DE_Z)        CTAP(DE_B)    CTAP(DE_M)    CTAP(DE_COMMA) CTAP(DE_PERIOD) CTAP(DE_J) &kp LC(SPACE)
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo SPECIAL   &kp SPACE     CTAP(BSPC)        CTAP(RETURN)  &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -67,11 +67,11 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(special_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          ___           &kp DE_DEG    &kp DE_UNDS   &kp DE_LBRC   &kp DE_RBRC   &ud DE_CARET      &kp DE_EXLM   &kp DE_LT     &kp DE_GT     &kp DE_EQL    &kp DE_AMPR   &kp DE_SECT
+          ___           &kp DE_DEG    &kp DE_UNDS   CTAP(DE_LBRC) CTAP(DE_RBRC) &ud DE_CARET      &kp DE_EXLM   &kp DE_LT     &kp DE_GT     &kp DE_EQL    &kp DE_AMPR   &kp DE_SECT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp DE_BSLS   &kp DE_SLSH   &kp DE_LCBR   &kp DE_RCBR   &kp DE_ASTR       &kp DE_QUES   &kp DE_LPRN   &kp DE_RPRN   &kp DE_MINUS  &kp DE_COLN   &kp DE_AT
+          ___           &kp DE_BSLS   CTAP(DE_SLSH) CTAP(DE_LCBR) CTAP(DE_RCBR) &kp DE_ASTR       &kp DE_QUES   &kp DE_LPRN   &kp DE_RPRN   &kp DE_MINUS  &kp DE_COLN   &kp DE_AT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp DE_HASH   &kp DE_DLR    &kp DE_PIPE   &kp DE_TILD   &ud DE_GRV        &kp DE_PLUS   &kp DE_PERC   &kp DE_DQUO   &kp DE_QUOT   &kp DE_SCLN   &kp DE_EURO
+          ___           CTAP(DE_HASH) &kp DE_DLR    &kp DE_PIPE   &kp DE_TILD   &ud DE_GRV        &kp DE_PLUS   &kp DE_PERC   &kp DE_DQUO   &kp DE_QUOT   &kp DE_SCLN   &kp DE_EURO
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ___           ___           ___               ___           ___           &mo BT
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -83,7 +83,7 @@ ZMK_LAYER(num_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           ___           &kp HOME      CTAP(LEFT)    &kp DOWN      CTAP(RIGHT)   &kp END           &kp LG(LS(S)) &kp NUM4      &kp NUM5      &kp NUM6      &kp RSHIFT    &kp DE_UNDS
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp LCTRL     &kp H         &kp J         &cp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp LALT      &kp DE_DLR
+          &kp KP_NLCK   &kp LCTRL     &kp H         &kp J         &kp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp LALT      &kp DE_DLR
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ___           ___           ___               ___           ___           ___
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
