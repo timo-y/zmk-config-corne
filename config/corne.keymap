@@ -48,11 +48,11 @@ ZMK_BEHAVIOR(ct, hold_tap,
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp LC(SPACE) CTAP(X)       CTAP(V)       CTAP(L)       CTAP(C)       CTAP(W)           CTAP(K)       CTAP(H)       CTAP(G)       CTAP(F)       CTAP(Q)       CTAP(MINUS)
+          &kp LC(SPACE) CTAP(DE_X)    CTAP(DE_V)    CTAP(DE_L)    CTAP(DE_C)    CTAP(DE_W)        CTAP(DE_K)    CTAP(DE_H)    CTAP(DE_G)    CTAP(DE_F)    CTAP(DE_Q)    CTAP(DE_SS)
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LC(LS(M)) CTAP(U)       CTAP(I)       CTAP(A)       CTAP(E)       CTAP(O)           CTAP(S)       CTAP(N)       CTAP(R)       CTAP(T)       CTAP(D)       CTAP(Z)    
+          &kp LC(LS(M)) CTAP(DE_U)    CTAP(DE_I)    CTAP(DE_A)    CTAP(DE_E)    CTAP(DE_O)        CTAP(DE_S)    CTAP(DE_N)    CTAP(DE_R)    CTAP(DE_T)    CTAP(DE_D)    CTAP(DE_Y)    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHIFT   &mt LCTRL LBKT &mt LWIN SEMI &mt LALT SQT  CTAP(P)       CTAP(Y)           CTAP(B)       CTAP(M)       CTAP(COMMA)   CTAP(PERIOD)  CTAP(J)       &kp ESC
+          &kp LSHIFT   &mt LCTRL LBKT &mt LWIN SEMI &mt LALT SQT  CTAP(DE_P)    CTAP(DE_Z)        CTAP(DE_B)    CTAP(DE_M)    CTAP(COMMA)   CTAP(PERIOD)  CTAP(DE_J)    &kp ESC
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo SPECIAL   &kp SPACE     CTAP(BSPC)        CTAP(RETURN)  &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -60,11 +60,11 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(special_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          ___           &kp DE_CIRCLE &kp DE_USCORE &kp DE_LBRCKT &kp DE_RBRCKT &kp DE_CARET      &kp DE_EXCL   &kp DE_LT     &kp DE_GT     &kp DE_EQ     &kp DE_AMP    &kp DE_PARA
+          ___           &kp DE_DEG    &kp DE_UNDS   &kp DE_LBRC   &kp DE_RBRC   &kp DE_CARET      &kp DE_EXLM   &kp DE_LT     &kp DE_GT     &kp DE_EQL    &kp DE_AMPR   &kp DE_SECT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp DE_BSLASH &kp DE_FSLASH &kp DE_LBRACE &kp DE_RBRACE &kp DE_STAR       &kp DE_QMARK  &kp DE_LPAR   &kp DE_RPAR   &kp DE_MINUS  &kp DE_COLON  &kp DE_AT
+          ___           &kp DE_BSLS   &kp DE_SLSH   &kp DE_LCBR   &kp DE_RCBR   &kp DE_ASTR       &kp DE_QUES   &kp DE_LPRN   &kp DE_RPRN   &kp DE_MINUS  &kp DE_COLN   &kp DE_AT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp DE_HASH   &kp DE_DOLLAR &kp DE_PIPE   &kp DE_TILDE  &kp DE_GRAVE      &kp DE_PLUS   &kp DE_PERCENT &kp DE_DQT   &kp DE_SQT    &kp DE_SCOLON &kp DE_EURO
+          ___           &kp DE_HASH   &kp DE_DLR    &kp DE_PIPE   &kp DE_TILD   &kp DE_GRV        &kp DE_PLUS   &kp DE_PERC   &kp DE_DQUO   &kp DE_QUOT   &kp DE_SCLN   &kp DE_EURO
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ___           ___           ___               ___           ___           &mo BT
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -74,9 +74,9 @@ ZMK_LAYER(num_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           ___           &kp PG_UP     CTAP(BSPC)    &kp UP        CTAP(DELETE)  &kp PG_DN         &kp SYSREQ    &kp NUM7      &kp NUM8      &kp NUM9      &none         &none
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp HOME      CTAP(LEFT)    &kp DOWN      CTAP(RIGHT)   &kp END           &kp LG(LS(S)) &kp NUM4      &kp NUM5      &kp NUM6      &kp RSHIFT    &kp QUESTION
+          ___           &kp HOME      CTAP(LEFT)    &kp DOWN      CTAP(RIGHT)   &kp END           &kp LG(LS(S)) &kp NUM4      &kp NUM5      &kp NUM6      &kp RSHIFT    &kp DE_UNDS
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp LCTRL     &kp H         &kp J         &cp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp LALT      &kp DOLLAR
+          ___           &kp LCTRL     &kp H         &kp J         &cp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp LALT      &kp DE_DLR
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ___           ___           ___               ___           ___           ___
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
