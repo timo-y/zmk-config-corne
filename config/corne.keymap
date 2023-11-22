@@ -38,9 +38,8 @@
 
 // control-tap-behavior
 ZMK_BEHAVIOR(ct, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <125>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
     bindings = <&kp>, <&kp>;
 )
 
