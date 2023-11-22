@@ -66,8 +66,8 @@
 #define DE_ASTR LS(DE_PLUS) // *
 #define DE_QUOT LS(DE_HASH) // '
 #define DE_GT	LS(DE_LT)	// >
-#define DE_SCLN LS(DE_COMM) // ;
-#define DE_COLN LS(DE_DOT)  // :
+#define DE_SCLN LS(DE_COMMA)// ;
+#define DE_COLN LS(DE_PERIOD)  // :
 #define DE_UNDS LS(DE_MINUS)// _
 #define DE_SUP2 LA(DE_2)    // ²
 #define DE_SUP3 LA(DE_3)    // ³
@@ -79,5 +79,5 @@
 #define DE_AT   LA(DE_Q)    // @
 #define DE_EURO LA(DE_E)    // €
 #define DE_TILD LA(DE_PLUS) // ~
-#define DE_PIPE LA(DE_LABK) // |
+#define DE_PIPE LA(DE_LT)	// |
 #define DE_MICR LA(DE_M)    // µ
