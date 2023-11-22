@@ -26,7 +26,7 @@
 #define DE_O    O    		// O
 #define DE_P    P    		// P
 #define DE_UE	LBKT	 	// Ü
-#define DE_PLUS RBRC 		// +
+#define DE_PLUS RBKT 		// +
 #define DE_A    A    		// A
 #define DE_S    S    		// S
 #define DE_D    D    		// D
