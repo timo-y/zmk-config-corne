@@ -34,17 +34,6 @@
         }; \
     };
 	
-#define ZMK_MACRO(name, type, ...) \
-    / { \
-        macros { \
-            name: name { \
-                label = ZMK_HELPER_STRINGIFY(ZB_ ## name); \
-                ZMK_BEHAVIOR_CORE_ ## type; \
-                __VA_ARGS__ \
-            }; \
-        }; \
-    };
-
 /* ZMK_LAYER */
 
 #define MACRO_CHOOSER3(_1, _2, _3, FUNC, ...) FUNC

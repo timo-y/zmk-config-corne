@@ -46,7 +46,7 @@ ZMK_BEHAVIOR(ct, hold_tap,
 /* macros */
 
 // undead DE_CARET and DE_GRV
-ZMK_MACRO(ud, macro_one_param,
+ZMK_BEHAVIOR(ud, macro_one_param,
 	bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER &kp SPACE>;
 )
 
