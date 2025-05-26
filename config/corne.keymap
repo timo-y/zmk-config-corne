@@ -56,13 +56,13 @@ ZMK_BEHAVIOR(ud, macro_one_param,
 
 ZMK_LAYER(default,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp ESC       CTAP(DE_X)    CTAP(DE_V)    CTAP(DE_L)    CTAP(DE_C)    CTAP(DE_W)        CTAP(DE_K)    CTAP(DE_H)    CTAP(DE_G)    CTAP(DE_F)    CTAP(DE_Q)    CTAP(DE_SS)
+          &kp ESC        &kp DE_X      &kp DE_V      &kp DE_L      &kp DE_C      &kp DE_W          &kp DE_K      &kp DE_H      &kp DE_G      &kp DE_F      &kp DE_Q      &kp DE_SS 
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB       CTAP(DE_U)    CTAP(DE_I)    CTAP(DE_A)    CTAP(DE_E)    CTAP(DE_O)        CTAP(DE_S)    CTAP(DE_N)    CTAP(DE_R)    CTAP(DE_T)    CTAP(DE_D)    CTAP(DE_Y)    
+          &kp TAB        &kp DE_U      &kp DE_I     &ct LALT DE_A &ct LCTRL DE_E &kp DE_O          &kp DE_S    &ct LCTRL DE_N &ct LALT DE_R  &kp DE_T      &kp DE_D      &kp DE_Y     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHIFT   &ct LCTRL LBKT &ct LWIN SEMI &ct LALT SQT  CTAP(DE_P)    CTAP(DE_Z)        CTAP(DE_B)    CTAP(DE_M)    CTAP(DE_COMMA) CTAP(DE_PERIOD) CTAP(DE_J) &kp LC(SPACE)
+          &kp LSHIFT     &kp DE_UE   &ct LWIN DE_OE &kp DE_AE     &kp DE_P       &kp DE_Z          &kp DE_B      &kp DE_M     &kp DE_COMMA   &kp DE_PERIOD &kp DE_J      ___ 
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &mo SPECIAL   &kp SPACE     CTAP(BSPC)        CTAP(RETURN)  &kp LSHIFT    &mo NUM
+                                                    &mo SPECIAL   &kp SPACE      &kp BSPC          &kp RETURN   &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
