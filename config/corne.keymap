@@ -32,7 +32,7 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define SPECIAL 1
 #define NUM 2
-#define NMOUSE 3
+#define MOUSE 3
 #define FBT 4
 
 /* custom behaviors */
@@ -43,6 +43,22 @@ ZMK_BEHAVIOR(ct, hold_tap,
     tapping-term-ms = <200>;
     bindings = <&kp>, <&kp>;
 )
+
+/* combos */
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        
+        // NUM4 + NUM6 chord for KP_NLCK (only active on NUM layer)
+        combo_numlock {
+            timeout-ms = <50>;
+            key-positions = <31 33>; // positions of NUM4 and NUM6 in the num layer
+            bindings = <&kp KP_NLCK>;
+            layers = <NUM>; // only active on the NUM layer
+        };
+    };
+};
 
 /* macros */
 
@@ -68,45 +84,45 @@ ZMK_LAYER(default,
 
 ZMK_LAYER(special,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          ___           &kp DE_DEG    &kp DE_UNDS   CTAP(DE_LBRC) CTAP(DE_RBRC) &ud DE_CARET      &kp DE_EXLM   &kp DE_LT     &kp DE_GT     &kp DE_EQL    &kp DE_AMPR   &kp DE_SECT
+          ___           &kp DE_DEG    &kp DE_UNDS   &kp DE_LBRC   &kp DE_RBRC  &ud DE_CARET       &kp DE_EXLM   &kp DE_LT     &kp DE_GT     &kp DE_EQL    &kp DE_AMPR   &kp DE_SECT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp DE_BSLS   CTAP(DE_SLSH) CTAP(DE_LCBR) CTAP(DE_RCBR) &kp DE_ASTR       &kp DE_QUES   &kp DE_LPRN   &kp DE_RPRN   &kp DE_MINUS  &kp DE_COLN   &kp DE_AT
+          ___         &kp DE_BSLS  &kp DE_SLSH  &ct LALT DE_LCBR &ct LCTRL DE_RCBR &kp DE_ASTR  &kp DE_QUES  &ct LCTRL DE_LPRN &ct LALT DE_RPRN &kp DE_MINUS &kp DE_COLN &kp DE_AT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           CTAP(DE_HASH) &kp DE_DLR    &kp DE_PIPE   &kp DE_TILD   &ud DE_GRV        &kp DE_PLUS   &kp DE_PERC   &kp DE_DQUO   &kp DE_QUOT   &kp DE_SCLN   &kp DE_EURO
+          ___           &kp DE_HASH   &kp DE_DLR    &kp DE_PIPE   &kp DE_TILD   &ud DE_GRV        &kp DE_PLUS   &kp DE_PERC   &kp DE_DQUO   &kp DE_QUOT   &kp DE_SCLN   &kp DE_EURO
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    ___           ___           ___               ___           ___           &mo NMOUSE
+                                                    ___           ___           ___               ___           ___           &to MOUSE
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
 ZMK_LAYER(num,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          ___           &kp PG_UP     CTAP(BSPC)    &kp UP        CTAP(DELETE)  &kp PG_DN         &kp SYSREQ    &kp NUM7      &kp NUM8      &kp NUM9      &mkp MB4      &kp F12
+          ___           &kp PG_UP     &kp BSPC      &kp UP        &kp DELETE    &kp PG_DN         &kp SYSREQ    &kp NUM7      &kp NUM8      &kp NUM9      &mkp MB4      &kp F12
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp HOME      CTAP(LEFT)    &kp DOWN      CTAP(RIGHT)   &kp END           &kp LG(LS(S)) &kp NUM4      &kp NUM5      &kp NUM6      &kp KP_DOT    &kp RSHIFT    
+          ___           &kp HOME      &kp LEFT   &ct LALT DOWN &ct LCTRL RIGHT  &kp END           &kp LG(LS(S)) &ct LCTRL NUM4 &ct LALT NUM5 &kp NUM6     &kp KP_DOT    &kp RSHIFT    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp KP_NLCK   &kp LCTRL     &kp H         &kp J         &kp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp KP_COMMA  &kp LALT      
+          ___           &kp LCTRL     &kp H         &kp J         &kp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp KP_COMMA  &kp LALT      
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo FBT       ___           ___               ___           ___           ___
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
-ZMK_LAYER(n_bt,
+ZMK_LAYER(mouse,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &none         &none         &none         &none         &none         &none             &none         CTAP(N7)      CTAP(N8)      CTAP(N9)      &none         &none
+          ___           &none         &msc SCRL_UP &mmv MOVE_UP  &msc SCRL_DOWN   &none             &none         &mkp MB4      &mkp MB5      &none         &none         &none
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none         CTAP(N4)      CTAP(N5)      CTAP(N6)      &none         &none 
+          ___           &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none             &none         &mkp MB1      &mkp MB3      &mkp MB2      &none       &kp RSHIFT    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &none         &none         &none         &none         &none         &none             CTAP(N0)      CTAP(N1)      CTAP(N2)      CTAP(N3)      &none         &none 
+          ___           &kp LCTRL     &none         &none         &none         &none               &none         &none         &none         &none         &none       &kp LALT      
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    ___           ___           ___               ___           ___           ___
+                                                    &to DEF        ___           ___               ___           ___           &to DEF
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
-ZMK_LAYER(func,
+ZMK_LAYER(func_bt,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12 
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &none         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none         &none 
+          &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none         &none         &none         &none         &none         &none 
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LSHIFT    &kp LCTRL     &none         &none         &none         &none             &none         &none         &none         &none         &none         &kp LALT
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
