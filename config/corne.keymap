@@ -48,7 +48,7 @@ ZMK_BEHAVIOR(ct, hold_tap,
 /* combos */
 
 // NUMLOCK
-ZMK_COMBO(numlock_combo,  &kp KP_NLCK, RM1 RM3, NUM, 25)
+ZMK_COMBO(numlock_combo,  &kp KP_NLCK, 31 33, NUM, 25)
 
 /* macros */
 
