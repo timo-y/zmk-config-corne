@@ -47,19 +47,8 @@ ZMK_BEHAVIOR(ct, hold_tap,
 
 /* combos */
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        
-        // NUM4 + NUM6 chord for KP_NLCK (only active on NUM layer)
-        combo_numlock {
-            timeout-ms = <50>;
-            key-positions = <31 33>; // positions of NUM4 and NUM6 in the num layer
-            bindings = <&kp KP_NLCK>;
-            layers = <NUM>; // only active on the NUM layer
-        };
-    };
-};
+// NUMLOCK
+ZMK_COMBO(numlock_combo,  &kp KP_NLCK, 31 33, NUM, 25)
 
 /* macros */
 
