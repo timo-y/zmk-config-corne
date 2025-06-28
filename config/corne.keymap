@@ -48,7 +48,7 @@ ZMK_BEHAVIOR(ct, hold_tap,
 /* combos */
 
 // NUMLOCK
-ZMK_COMBO(numlock_combo,  &kp KP_NLCK, 31 33, NUM, 25)
+ZMK_COMBO(numlock_combo,  &kp KP_NLCK, 31 34, NUM, 25)
 
 /* macros */
 
@@ -64,9 +64,9 @@ ZMK_LAYER(default,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC        &kp DE_X      &kp DE_V      &kp DE_L      &kp DE_C      &kp DE_W          &kp DE_K      &kp DE_H      &kp DE_G      &kp DE_F      &kp DE_Q      &kp DE_SS 
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB        &kp DE_U      &kp DE_I     &ct LALT DE_A &ct LCTRL DE_E &kp DE_O          &kp DE_S    &ct LCTRL DE_N &ct LALT DE_R  &kp DE_T      &kp DE_D      &kp DE_Y     
+          &kp TAB      &ct LSHIFT DE_U &ct LWIN DE_I &ct LALT DE_A &ct LCTRL DE_E &kp DE_O         &kp DE_S    &ct LCTRL DE_N &ct LALT DE_R  &ct LWIN DE_T &ct LSHIFT DE_D &kp DE_Y     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHIFT     &kp DE_UE   &ct LWIN DE_OE &kp DE_AE     &kp DE_P       &kp DE_Z          &kp DE_B      &kp DE_M     &kp DE_COMMA   &kp DE_PERIOD &kp DE_J      ___ 
+          &kp LSHIFT     &kp DE_UE   &kp DE_OE      &kp DE_AE     &kp DE_P       &kp DE_Z          &kp DE_B      &kp DE_M     &kp DE_COMMA   &kp DE_PERIOD &kp DE_J      ___ 
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo SPECIAL   &kp SPACE      &kp BSPC          &kp RETURN   &kp LSHIFT    &mo NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -76,7 +76,7 @@ ZMK_LAYER(special,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           ___           &kp DE_DEG    &kp DE_UNDS   &kp DE_LBRC   &kp DE_RBRC  &ud DE_CARET       &kp DE_EXLM   &kp DE_LT     &kp DE_GT     &kp DE_EQL    &kp DE_AMPR   &kp DE_SECT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___         &kp DE_BSLS  &kp DE_SLSH  &ct LALT DE_LCBR &ct LCTRL DE_RCBR &kp DE_ASTR  &kp DE_QUES  &ct LCTRL DE_LPRN &ct LALT DE_RPRN &kp DE_MINUS &kp DE_COLN &kp DE_AT
+          ___ &ct LSHIFT DE_BSLS &ct LWIN DE_SLSH &ct LALT DE_LCBR &ct LCTRL DE_RCBR &kp DE_ASTR &kp DE_QUES &ct LCTRL DE_LPRN &ct LALT DE_RPRN &ct LWIN DE_MINUS &ct LSHIFT DE_COLN &kp DE_AT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           ___           &kp DE_HASH   &kp DE_DLR    &kp DE_PIPE   &kp DE_TILD   &ud DE_GRV        &kp DE_PLUS   &kp DE_PERC   &kp DE_DQUO   &kp DE_QUOT   &kp DE_SCLN   &kp DE_EURO
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -88,9 +88,9 @@ ZMK_LAYER(num,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           ___           &kp PG_UP     &kp BSPC      &kp UP        &kp DELETE    &kp PG_DN         &kp SYSREQ    &kp NUM7      &kp NUM8      &kp NUM9      &mkp MB4      &kp F12
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp HOME      &kp LEFT   &ct LALT DOWN &ct LCTRL RIGHT  &kp END           &kp LG(LS(S)) &ct LCTRL NUM4 &ct LALT NUM5 &kp NUM6     &kp KP_DOT    &kp RSHIFT    
+          ___       &ct LSHIFT HOME   &ct LWIN LEFT &ct LALT DOWN &ct LCTRL RIGHT  &kp END         &kp LG(LS(S)) &ct LCTRL NUM4 &ct LALT NUM5 &ct LWIN NUM6 &ct LSHIFT KP_DOT &none    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___           &kp LCTRL     &kp H         &kp J         &kp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp KP_COMMA  &kp LALT      
+          ___           &kp LCTRL     &kp H         &kp J         &kp K         &kp L             &kp NUM0      &kp NUM1      &kp NUM2      &kp NUM3      &kp KP_COMMA  &none      
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &mo FBT       ___           ___               ___           ___           ___
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
